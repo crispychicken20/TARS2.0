@@ -1,4 +1,5 @@
 # 🤖 TARS: Voice-Activated AI Assistant
+Testing pattern
 
 TARS is a modular, intelligent assistant system designed to emulate a personalized AI experience — starting with a simple wake word and growing into a full conversational assistant.
 
