@@ -1,0 +1,199 @@
+/* src/styles/About.css */
+
+.about-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+  color: white;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* HERO SECTION */
+.about-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.tars-logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(0,191,255,0.95), rgba(0,0,0,0.9));
+  border: 3px solid rgba(0,191,255,0.7);
+  box-shadow: 0 0 40px rgba(0, 191, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  font-weight: bold;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.tars-title {
+  font-size: 56px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  background: linear-gradient(90deg, rgba(0,191,255,1) 0%, rgba(255,255,255,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.tars-subtitle {
+  font-size: 24px;
+  color: rgba(0, 191, 255, 0.9);
+  margin-bottom: 40px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.about-description {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 191, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.2);
+}
+
+.about-description p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* SECTION HEADINGS */
+.about-section {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding: 0 30px;
+}
+
+.section-title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: rgba(0, 191, 255, 1);
+  letter-spacing: 2px;
+}
+
+/* FEATURES GRID */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* FEATURE CARD */
+.feature-card {
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 191, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 191, 255, 0.3);
+  border-color: rgba(0, 191, 255, 0.6);
+}
+
+.feature-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: rgba(0, 191, 255, 1);
+  font-weight: 600;
+}
+
+.feature-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* TECHNOLOGY STACK */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tech-badge {
+  padding: 10px 20px;
+  background: rgba(0, 191, 255, 0.15);
+  border: 1px solid rgba(0, 191, 255, 0.4);
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 191, 255, 1);
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  background: rgba(0, 191, 255, 0.25);
+  transform: scale(1.05);
+}
+
+/* CALL TO ACTION */
+.about-cta {
+  max-width: 600px;
+  margin: 80px auto 0;
+  padding: 0 30px;
+  text-align: center;
+}
+
+.about-cta p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  background: rgba(0, 191, 255, 0.8);
+  border: 2px solid rgba(0, 191, 255, 1);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.4);
+  outline: none;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.6);
+}
+
+/* ANIMATIONS */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 40px rgba(0, 191, 255, 0.6);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 60px rgba(0, 191, 255, 0.8);
+  }
+}

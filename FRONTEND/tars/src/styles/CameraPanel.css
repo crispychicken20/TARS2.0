@@ -1,0 +1,176 @@
+/* =========================================================
+   TARS VISION – CAMERA PANEL
+   Cleaned, optimized, no UI/UX changes, only stability fixes
+   ========================================================= */
+
+.camera-panel {
+  position: fixed !important;
+  right: 24px;
+  bottom: 24px;
+
+  width: 380px;
+  max-width: 90vw;
+
+  background: rgba(5, 5, 15, 0.96);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 191, 255, 0.5);
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.3);
+
+  color: #f5f5f5;
+
+  z-index: 999999 !important; /* 🔥 Always above dots */
+
+  overflow: hidden;
+  backdrop-filter: blur(14px);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.camera-panel--minimized {
+  height: auto;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.camera-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 8px 12px;
+
+  background: radial-gradient(circle at top left, #00bfff 0%, #05050f 55%);
+  border-bottom: 1px solid rgba(0, 191, 255, 0.4);
+
+  z-index: 999999 !important;
+}
+
+.camera-panel__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #e8f7ff;
+}
+
+
+/* ---------- HEADER BUTTONS ---------- */
+
+.camera-panel__actions {
+  display: flex;
+  gap: 6px;
+}
+
+.camera-panel__btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  font-size: 0.8rem;
+  padding: 3px 7px;
+  border-radius: 999px;
+
+  background: rgba(10, 10, 20, 0.8);
+  color: #f5f5f5;
+
+  transition: background 0.15s ease, transform 0.1s ease;
+
+  z-index: 999999 !important;
+}
+
+.camera-panel__btn:hover {
+  background: rgba(0, 191, 255, 0.7);
+  transform: translateY(-1px);
+}
+
+.camera-panel__btn--close {
+  background: rgba(220, 20, 60, 0.85);
+}
+
+.camera-panel__btn--close:hover {
+  background: rgba(255, 80, 120, 0.95);
+}
+
+.camera-panel__btn--primary {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+
+/* ---------- BODY ---------- */
+
+.camera-panel__body {
+  padding: 10px 12px 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  z-index: 999999 !important;
+}
+
+
+/* ---------- VIDEO WRAPPER ---------- */
+
+.camera-panel__video-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  border: 1px solid rgba(0, 191, 255, 0.3);
+
+  background: radial-gradient(circle at center, #1a1a2a, #05050a);
+
+  position: relative;
+
+  z-index: 999999 !important;
+}
+
+
+/* ---------- VIDEO ELEMENT ---------- */
+
+.camera-panel__video {
+  width: 100% !important;
+  height: 100% !important;
+
+  display: block !important;
+  object-fit: cover !important;
+
+  background: #000 !important;
+  border-radius: 10px;
+
+  position: absolute !important;  /* 🔥 Fix Safari layout */
+  top: 0;
+  left: 0;
+
+  z-index: 99999999 !important; /* 🔥 Force above dots */
+}
+
+
+/* ---------- CONTROLS ---------- */
+
+.camera-panel__controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.camera-panel__info {
+  font-size: 0.75rem;
+  color: #cfd9ff;
+  margin-top: 4px;
+}
+
+.camera-panel__error {
+  color: #ff6b81;
+}
+
+.camera-panel__result .label {
+  font-weight: 600;
+  color: #00bfff;
+}

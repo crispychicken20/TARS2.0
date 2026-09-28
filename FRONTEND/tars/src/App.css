@@ -1,0 +1,157 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+ 
+}
+
+
+
+/* Only hide overflow on home page, not about page */
+body.no-scroll {
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a {
+  margin-left: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.about-container {
+  padding-top: 100px;
+  text-align: center;
+  z-index: 5;
+}
+
+/* TARS Emblem */
+/* Emblem */
+.tars-emblem {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(0,191,255,0.95), rgba(0,0,0,0.9));
+  border: 2px solid rgba(0,191,255,0.7);
+  box-shadow: 0 0 22px rgba(0,191,255,0.6);
+  color: white;
+  font-size: 1.9rem;
+  font-weight: 750;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 9999;
+}
+.tars-emblem:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px rgba(0,191,255,0.95);
+}
+
+/* Chat dock */
+.chat-dock {
+  position: fixed;
+  /* sit above where the emblem would be */
+  bottom: 24px;
+  right: 24px;
+
+  width: min(380px, 92vw);
+  height: clamp(420px, 60vh, 640px);
+
+  background: rgba(0,0,0,0.65);
+  border: 1px solid rgba(0,191,255,0.3);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(0,191,255,0.25);
+  overflow: hidden;
+
+  transform: translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 240ms ease, opacity 240ms ease;
+  z-index: 9998; /* below emblem (but emblem is hidden when open) */
+}
+.chat-dock.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Titlebar */
+.chat-dock__titlebar {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  background: rgba(0, 191, 255, 0.12);
+  border-bottom: 1px solid rgba(0,191,255,0.25);
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Close button */
+.chat-dock__close {
+  background: transparent;
+  color: white;
+  font-size: 1.6rem;
+  line-height: 1;
+  border: none;
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease, transform 0.1s ease;
+  height: 20px;
+}
+.chat-dock__close:hover { background: rgba(255,255,255,0.12); }
+.chat-dock__close:active { transform: scale(0.96); }
+
+/* Body */
+.chat-dock__body {
+  height: calc(100% - 48px);
+  padding: 10px;
+}
+
+/* Mobile: turn dock into a sheet */
+@media (max-width: 480px) {
+  .chat-dock {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 85vh;
+    border-radius: 0;
+  }
+}

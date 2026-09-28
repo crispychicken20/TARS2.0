@@ -1,0 +1,139 @@
+/* src/styles/Navigation.css */
+
+/* General Navigation Bar */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: fixed;
+  width: calc(100% - 60px);
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 191, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 191, 255, 0.1);
+}
+
+/* Brand */
+.nav-brand {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-brand:hover {
+  color: rgba(0, 191, 255, 1);
+}
+
+/* Voice Hint */
+.voice-hint {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: rgba(0, 191, 255, 0.6);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  animation: subtle-pulse 4s ease-in-out infinite;
+}
+
+.mic-icon {
+  opacity: 5.7;
+}
+
+/* Right Section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* About Link */
+.nav-link {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.nav-link:hover {
+  background: rgba(0, 191, 255, 0.15);
+  color: rgba(0, 191, 255, 1);
+}
+
+/* Chat Toggle Button */
+.chat-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(0, 191, 255, 1);
+  background: rgba(0, 191, 255, 0.15);
+  border: 2px solid rgba(0, 191, 255, 0.5);
+  border-radius: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.2);
+  outline: none;
+  flex-shrink: 0;
+}
+
+.chat-toggle:hover {
+  background: rgba(0, 191, 255, 0.25);
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
+}
+
+/* Active Chat Button */
+.chat-toggle.active {
+  color: white;
+  background: rgba(0, 191, 255, 0.8);
+  border-color: rgba(0, 191, 255, 1);
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+}
+
+/* Subtle pulse animation for hint */
+@keyframes subtle-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    border-color: rgba(0, 191, 255, 0.15);
+  }
+  50% {
+    opacity: 0.95;
+    border-color: rgba(0, 191, 255, 0.25);
+  }
+}
+
+
+/* Highlight animation when wake word detected */
+.voice-hint.active {
+  color: rgba(0, 191, 255, 1);
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(0, 191, 255, 0.8);
+  animation: glow-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { text-shadow: 0 0 6px rgba(0, 191, 255, 0.6); }
+  50% { text-shadow: 0 0 16px rgba(0, 191, 255, 1); }
+}

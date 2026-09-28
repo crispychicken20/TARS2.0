@@ -1,0 +1,26 @@
+# --- Audio & Wake Word ---
+pvporcupine>=3.0
+pyaudio>=0.2
+python-dotenv>=1.0
+soundfile>=0.12
+
+# --- Torch / ML / AI ---
+torch>=2.4
+torchaudio>=2.4
+transformers>=4.44
+accelerate>=0.33
+opencv-python>=4.10
+whisper-openai>=20231117
+numpy>=1.26
+
+# --- TTS + Speech + Vision ---
+pyttsx3>=2.90
+vosk>=0.3.45
+elevenlabs>=1.0.6
+Pillow>=10.3
+bitsandbytes>=0.43
+
+# --- LLM Tools ---
+langchain-core>=0.3
+langchain-google-genai>=1.0
+langgraph>=0.2
