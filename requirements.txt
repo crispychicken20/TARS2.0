@@ -15,7 +15,7 @@ numpy>=1.26
 
 # --- TTS + Speech + Vision ---
 pyttsx3>=2.90
-vosk>=0.3.45
+vosk==0.3.44
 elevenlabs>=1.0.6
 Pillow>=10.3
 bitsandbytes>=0.43
