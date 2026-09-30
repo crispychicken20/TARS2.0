@@ -154,10 +154,10 @@ TARS/
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Author & Collaborater
 
 **Krushna Thakkar**  
-AI Researcher | MSAI @ SJSU | Hobbyist Builder  
+AI Researcher | Hobbyist Builder  
 [GitHub](https://github.com/kru2710shna) • [Website](https://localhost0027.netlify.app)
 
 ---
